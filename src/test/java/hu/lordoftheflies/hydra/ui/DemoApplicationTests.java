@@ -1,4 +1,4 @@
-package hu.lordoftheflies.hydra;
+package hu.lordoftheflies.hydra.ui;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package hu.lordoftheflies.hydra;
+package hu.lordoftheflies.hydra.ui;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
