@@ -9,6 +9,7 @@ import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +24,13 @@ public class ApplicationController {
 
     @RequestMapping(path = "/user", method = RequestMethod.GET)
     public Principal user(Principal user) {
+        return user;
+    }
+    
+    @RequestMapping(path = "/login", method = RequestMethod.POST, 
+            consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_FORM_URLENCODED_VALUE },
+            produces = { MediaType.APPLICATION_JSON_VALUE })
+    public Principal login(Principal user) {
         return user;
     }
 
