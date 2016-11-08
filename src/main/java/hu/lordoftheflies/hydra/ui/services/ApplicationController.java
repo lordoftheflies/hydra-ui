@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author lordoftheflies
  */
 @RestController
-@RequestMapping(value = "/view")
+//@RequestMapping(value = "/view")
 public class ApplicationController {
 
     @RequestMapping(path = "/user", method = RequestMethod.GET)
@@ -27,6 +28,7 @@ public class ApplicationController {
         return user;
     }
     
+//    @PreAuthorize(value = "true")
     @RequestMapping(path = "/login", method = RequestMethod.POST, 
             consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_FORM_URLENCODED_VALUE },
             produces = { MediaType.APPLICATION_JSON_VALUE })
